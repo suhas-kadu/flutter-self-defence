@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:self_defence/views/self_defence_techniques.dart';
+import 'package:self_defence/views/self_defence_tips.dart';
 
 class HomePage extends StatelessWidget {
+  static const String id = "HomePage";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +23,7 @@ class HomePage extends StatelessWidget {
                   elevation: 5.0,
                   color: Colors.white,
                   textColor: Colors.black,                  
-                  onPressed: (){},
+                  onPressed: ()=> Navigator.pushNamed(context, SelfDefenceTips.id),
                   child: Text(
                     "Self Defence Tips",
                   ),
@@ -29,7 +32,7 @@ class HomePage extends StatelessWidget {
                   elevation: 5.0,
                   color: Colors.white,
                   textColor: Colors.black,                  
-                  onPressed: (){},
+                  onPressed: () => Navigator.pushNamed(context, SelfDefenceTechniques.id),
                   child: Text(
                     "Self Defence Techniques",
                   ),
