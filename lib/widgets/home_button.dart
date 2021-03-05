@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:self_defence/constants.dart';
 
 
 class HomeButton extends StatelessWidget {
@@ -18,7 +19,7 @@ class HomeButton extends StatelessWidget {
       onPressed: () =>
           Navigator.pushNamed(context, route),
       child: Text(
-        title,
+        title, style: kBoldText.copyWith(fontWeight: FontWeight.normal),
       ),
     );
   }
