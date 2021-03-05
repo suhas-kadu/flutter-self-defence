@@ -9,4 +9,4 @@ const kTextStyle = TextStyle(
   fontSize: 16,
 );
 
-const kBoldText = TextStyle(fontWeight: FontWeight.bold);
+const kBoldText = TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
