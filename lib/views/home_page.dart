@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 110,),
                 HomeButton(title: "Self Defence Tips", route: SelfDefenceTips.id,),
                 HomeButton(title: "Self Defence Techniques", route: SelfDefenceTechniques.id),
                 HomeButton(title: "Help", route: HelpLine.id)
