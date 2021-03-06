@@ -54,7 +54,7 @@ class _TechniqueDemoState extends State<TechniqueDemo> {
               elevation: 5.0,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                 child: Column(
                   children: [
                     AspectRatio(
