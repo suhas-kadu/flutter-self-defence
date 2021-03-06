@@ -49,25 +49,29 @@ class _TechniqueDemoState extends State<TechniqueDemo> {
         future: _initializeVideoPlayerFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return Card(
-              margin: EdgeInsets.all(16),
-              elevation: 5.0,
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Column(
-                  children: [
-                    AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: VideoPlayer(_controller),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      widget.technique.description,
-                      textAlign: TextAlign.justify,
-                      style: kTextStyle,
-                    ),
-                  ],
+            return SingleChildScrollView(
+              physics: ClampingScrollPhysics(),
+                          child: Card(
+                margin: EdgeInsets.all(16),
+                elevation: 5.0,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                  child: Column(
+                    children: [
+                      AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        widget.technique.description,
+                        textAlign: TextAlign.justify,
+                        style: kTextStyle,
+                      ),
+                      SizedBox(height: 50,)
+                    ],
+                  ),
                 ),
               ),
             );
