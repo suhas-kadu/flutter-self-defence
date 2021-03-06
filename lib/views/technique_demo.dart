@@ -87,7 +87,7 @@ class _TechniqueDemoState extends State<TechniqueDemo> {
             }
           });
         },
-        child: Icon(Icons.play_arrow),
+        child: Icon(Icons.play_arrow, size: 32,),
       ),
     );
   }
