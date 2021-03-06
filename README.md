@@ -29,3 +29,12 @@ I have learnt about new widgets in Flutter and also about adding videos in an ap
 ## What's next for Self Defence App
 
 In Future I'll try to publish this App on Web as well and I'll also try to add authentication system.
+
+## Screenshots
+
+
+<img src="assets/screenshots/ss1.png" width="250"> &emsp; <img src="assets/screenshots/ss2.png" width="250"> &emsp; <img src="assets/screenshots/ss3.png" width="250">  <br /> <br />
+
+<img src="assets/screenshots/ss4.png" width="250"> &emsp; <img src="assets/screenshots/ss5.png" width="250"> &emsp; <img src="assets/screenshots/ss6.png" width="250">  <br /> 
+
+<img src="assets/screenshots/ss7.png" width="250"> 
