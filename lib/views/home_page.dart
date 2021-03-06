@@ -22,9 +22,9 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 110,),
-                HomeButton(title: "Self Defence Tips", route: SelfDefenceTips.id,),
-                HomeButton(title: "Self Defence Techniques", route: SelfDefenceTechniques.id),
-                HomeButton(title: "Help", route: HelpLine.id)
+                HomeButton(title: "Self Defence Tips", route: SelfDefenceTips.id, widget: SelfDefenceTips(),),
+                HomeButton(title: "Self Defence Techniques", route: SelfDefenceTechniques.id, widget: SelfDefenceTechniques(),),
+                HomeButton(title: "Help", route: HelpLine.id, widget: HelpLine(),)
               ],
             ),
           )
