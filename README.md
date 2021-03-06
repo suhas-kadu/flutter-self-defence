@@ -1,5 +1,5 @@
 <h1 align="center">Self  Defence App for Women</h1>
-<h3 align="center"><i>"Becuase safety comes first"</i></h3>
+<h3 align="center"><i>"Because safety comes first"</i></h3>
 
 
 ## Inspiration
