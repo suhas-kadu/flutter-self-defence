@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:self_defence/constants.dart';
 import 'package:self_defence/views/helpline.dart';
 import 'package:self_defence/views/login_screen.dart';
 import 'package:self_defence/views/self_defence_techniques.dart';
@@ -56,6 +57,7 @@ class _HomePageState extends State<HomePage> {
                 child: InkWell(
                   onTap: () {
                     _auth.signOut();
+                    Constants.prefs.setBool("loggedIn", false);
                     passwordController.clear();
                     Navigator.pushReplacementNamed(context, LoginScreen.id);
                   },
@@ -65,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(5)),
                       padding: const EdgeInsets.all(8.0),
                       margin: const EdgeInsets.all(8.0),
-                      child: Text("Logout")),
+                      child: Text("Logout", style: TextStyle(fontWeight: FontWeight.bold))),
                 )),
           ),
           Align(

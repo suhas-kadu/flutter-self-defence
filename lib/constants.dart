@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 const kPrimaryColor = Color(0xFF6200EE);
 
@@ -10,3 +11,7 @@ const kTextStyle = TextStyle(
 );
 
 const kBoldText = TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
+
+class Constants {
+  static SharedPreferences prefs;
+}

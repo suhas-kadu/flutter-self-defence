@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:self_defence/constants.dart';
 import 'package:self_defence/views/home_page.dart';
 import 'package:self_defence/views/registeration_screen.dart';
 
@@ -30,6 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.teal,
       );
     } else {
+      Constants.prefs.setBool("loggedIn", true);
       setState(() {
         showSpinner = true;
       });
@@ -65,8 +67,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ModalProgressHUD(
-      inAsyncCall: showSpinner,
+    body: SingleChildScrollView(
+          child: ModalProgressHUD(
+          inAsyncCall: showSpinner,
+          child: Container(
+      height: MediaQuery.of(context).size.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -147,6 +152,8 @@ class _LoginScreenState extends State<LoginScreen> {
           )
         ],
       ),
+          ),
+        ),
     ));
   }
 }
