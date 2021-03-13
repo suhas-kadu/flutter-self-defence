@@ -16,7 +16,7 @@ class HomeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OpenContainer(      
+    return OpenContainer(
       openElevation: 0.0,
       closedElevation: 0.0,
       closedColor: Colors.transparent,
@@ -28,14 +28,18 @@ class HomeButton extends StatelessWidget {
           Navigator.pushNamed(context, route);
         }
 
-        return ElevatedButton(
-          // elevation: 5.0,
-          // color: Colors.white,
-          // textColor: Colors.black,
-          onPressed: () => action(),
-          child: Text(
-            title,
-            style: kBoldText.copyWith(fontWeight: FontWeight.normal),
+        return GestureDetector(
+          onTap: () => action(),
+          child: Container(
+            decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(5)),
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
+            child: Text(
+              title,
+              style: kBoldText.copyWith(
+                  color: Colors.black, fontWeight: FontWeight.normal),
+            ),
           ),
         );
       },

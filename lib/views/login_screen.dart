@@ -71,10 +71,17 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Welcome back!\n",
+            "Welcome back!",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
+          SizedBox(height: 20),
+          CircleAvatar(
+                radius: 80,
+                backgroundImage: NetworkImage(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJrKA8QKeRXscTiorh7qUwn_IzARVc3WiQA&usqp=CAU"),
+              ),
+              SizedBox(height: 16),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
@@ -102,8 +109,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          ElevatedButton(
-              onPressed: singIn,
+          GestureDetector(
+              onTap: singIn,
               child: Container(
                   // height: 50,
                   alignment: Alignment.center,

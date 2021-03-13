@@ -23,46 +23,57 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ModalProgressHUD(
-      inAsyncCall: showSpinner,
-      child: 
-        Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Welcome back!\n",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: TextField(
-                onChanged: (value) {
-                  email = value;
-                },
-                controller: emailController,
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  border: OutlineInputBorder(),
+        body: SingleChildScrollView(
+      child: ModalProgressHUD(
+        inAsyncCall: showSpinner,
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(
+                child: Text(
+                  "Register to Continue",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: TextField(
-                onChanged: (value) {
-                  password = value;
-                },
-                controller: passwordController,
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  border: OutlineInputBorder(),
+              SizedBox(height: 20),
+              CircleAvatar(
+                radius: 80,
+                backgroundImage: NetworkImage(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJrKA8QKeRXscTiorh7qUwn_IzARVc3WiQA&usqp=CAU"),
+              ),
+              SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  onChanged: (value) {
+                    email = value;
+                  },
+                  controller: emailController,
+                  decoration: InputDecoration(
+                    labelText: "Email",
+                    border: OutlineInputBorder(),
+                  ),
                 ),
               ),
-            ),
-            GestureDetector(
-                onTap:  () async {
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  onChanged: (value) {
+                    password = value;
+                  },
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                  onTap: () async {
                     // print("Email:$email\nPassword:$_password");
                     if (email == null || password == null) {
                       print("Inavlid credentials");
@@ -77,18 +88,18 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                       });
                       try {
                         final newUser =
-                            await _auth.createUserWithEmailAndPassword(email: email, password: password
-                                );
+                            await _auth.createUserWithEmailAndPassword(
+                                email: email, password: password);
                         await newUser.user.sendEmailVerification();
-                         if (newUser != null) {
+                        if (newUser != null) {
                           Fluttertoast.showToast(
-                            toastLength: Toast.LENGTH_LONG,
-                            msg:
-                                  "An email verification link has been sent to your account\nPlease verify your email");
+                              toastLength: Toast.LENGTH_LONG,
+                              msg:
+                                  "Email verification link sent\nVerify your email");
 
                           Navigator.pushNamed(context, HomePage.id);
                         }
-                        
+
                         setState(() {
                           showSpinner = false;
                         });
@@ -105,46 +116,45 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                         setState(() {
                           showSpinner = false;
                         });
-
-                      }}},
-                      
-                      
-                child: Container(
-                    // height: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: Colors.indigoAccent,
-                        borderRadius: BorderRadius.circular(5.0)),
-                    width: double.infinity,
-                    margin: const EdgeInsets.all(16.0),
-                    padding: const EdgeInsets.all(12.0),
-                    child: Text(
-                      "Register",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ))),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Already have an account ?",
-                ),
-                GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacementNamed(context, LoginScreen.id);
-                    },
-                    child: Text(
-                      " Login",
-                      style: TextStyle(color: Colors.blue),
-                    ))
-              ],
-            )
-          ],
+                      }
+                    }
+                  },
+                  child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.indigoAccent,
+                          borderRadius: BorderRadius.circular(5.0)),
+                      width: double.infinity,
+                      margin: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        "Register",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ))),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an account ?",
+                  ),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, LoginScreen.id);
+                      },
+                      child: Text(
+                        " Login",
+                        style: TextStyle(color: Colors.blue),
+                      ))
+                ],
+              )
+            ],
+          ),
         ),
-      
+      ),
     ));
   }
 }
