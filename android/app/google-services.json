@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701535198282",
+    "project_id": "self-defence-app-50ccf",
+    "storage_bucket": "self-defence-app-50ccf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701535198282:android:384c3ab6d37848a11b1ab3",
+        "android_client_info": {
+          "package_name": "com.example.self_defence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701535198282-19ne7inuauaaj3m86utceb1taiunksk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjpaHZWSwGK_UHH1-fvv6AhRnBmQW7QnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701535198282-19ne7inuauaaj3m86utceb1taiunksk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
