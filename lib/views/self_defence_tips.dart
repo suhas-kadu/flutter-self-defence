@@ -10,7 +10,7 @@ class SelfDefenceTips extends StatefulWidget {
 }
 
 class _SelfDefenceTipsState extends State<SelfDefenceTips> {
-  List<Tip> _tips = new List();
+  List<Tip> _tips ;
 
   ExpansionPanel _createTip(Tip tip) {
     return new ExpansionPanel(
@@ -71,7 +71,7 @@ class _SelfDefenceTipsState extends State<SelfDefenceTips> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: kPrimaryColor,
-          title: Text("8 Self Defence Tips Every\nWomen should know"),
+          title: Text("Self Defence Tips"),
         ),
         body: ListView(
           padding: EdgeInsets.symmetric(horizontal: 8),

@@ -25,7 +25,7 @@ class _SelfDefenceTechniquesState extends State<SelfDefenceTechniques> {
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: kPrimaryColor,
-          title: Text("8 Self Defence Moves"),
+          title: Text("Self Defence Moves"),
         ),
         body: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 4.0,),
