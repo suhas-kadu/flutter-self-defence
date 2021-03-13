@@ -1,7 +1,7 @@
 import '../model/technique_model.dart';
 
 List<Technique> getTechniques() {
-  List<Technique> _techniques = new List();
+  List<Technique> _techniques ;
   Technique technique = new Technique();
 
   technique.title = "Hammer Strike";

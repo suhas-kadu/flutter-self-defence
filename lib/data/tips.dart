@@ -1,7 +1,7 @@
 import '../model/tip_model.dart';
 
 List<Tip> getTips() {
-  List<Tip> _tips = new List();
+  List<Tip> _tips ;
   Tip tip = new Tip();
 
   tip.title = "Push back & yell loudly";

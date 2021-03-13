@@ -28,10 +28,10 @@ class HomeButton extends StatelessWidget {
           Navigator.pushNamed(context, route);
         }
 
-        return RaisedButton(
-          elevation: 5.0,
-          color: Colors.white,
-          textColor: Colors.black,
+        return ElevatedButton(
+          // elevation: 5.0,
+          // color: Colors.white,
+          // textColor: Colors.black,
           onPressed: () => action(),
           child: Text(
             title,
