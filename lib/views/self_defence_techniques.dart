@@ -11,7 +11,7 @@ class SelfDefenceTechniques extends StatefulWidget {
 }
 
 class _SelfDefenceTechniquesState extends State<SelfDefenceTechniques> {
-  List<Technique> _techniques ;
+  List<Technique> _techniques = <Technique>[] ;
 
   @override
   void initState() {
