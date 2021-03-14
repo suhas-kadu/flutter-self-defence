@@ -36,9 +36,9 @@ class HomeButton extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             margin: const EdgeInsets.all(8.0),
             child: Text(
-              title,
+              title,              
               style: kBoldText.copyWith(
-                  color: Colors.black, fontWeight: FontWeight.normal),
+                  color: Colors.black, fontWeight: FontWeight.values[2], letterSpacing: 0.8),
             ),
           ),
         );

@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     _auth.signOut();
                     Constants.prefs.setBool("loggedIn", false);
+                    emailController.clear();
                     passwordController.clear();
                     Navigator.pushReplacementNamed(context, LoginScreen.id);
                   },
