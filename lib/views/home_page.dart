@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:self_defence/constants.dart';
+// import 'package:self_defence/constants.dart';
 import 'package:self_defence/views/helpline.dart';
-import 'package:self_defence/views/login_screen.dart';
+// import 'package:self_defence/views/login_screen.dart';
 import 'package:self_defence/views/self_defence_techniques.dart';
 import 'package:self_defence/views/self_defence_tips.dart';
 import 'package:self_defence/widgets/home_button.dart';
@@ -50,27 +50,27 @@ class _HomePageState extends State<HomePage> {
             width: double.infinity,
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Align(
-                alignment: Alignment.topRight,
-                child: InkWell(
-                  onTap: () {
-                    _auth.signOut();
-                    Constants.prefs.setBool("loggedIn", false);
-                    emailController.clear();
-                    passwordController.clear();
-                    Navigator.pushReplacementNamed(context, LoginScreen.id);
-                  },
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5)),
-                      padding: const EdgeInsets.all(8.0),
-                      margin: const EdgeInsets.all(8.0),
-                      child: Text("Logout", style: TextStyle(fontWeight: FontWeight.bold))),
-                )),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(32.0),
+          //   child: Align(
+          //       alignment: Alignment.topRight,
+          //       child: InkWell(
+          //         onTap: () {
+          //           _auth.signOut();
+          //           Constants.prefs.setBool("loggedIn", false);
+          //           emailController.clear();
+          //           passwordController.clear();
+          //           Navigator.pushReplacementNamed(context, LoginScreen.id);
+          //         },
+          //         child: Container(
+          //             decoration: BoxDecoration(
+          //                 color: Colors.white,
+          //                 borderRadius: BorderRadius.circular(5)),
+          //             padding: const EdgeInsets.all(8.0),
+          //             margin: const EdgeInsets.all(8.0),
+          //             child: Text("Logout", style: TextStyle(fontWeight: FontWeight.bold))),
+          //       )),
+          // ),
           Align(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

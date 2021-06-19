@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             
         Theme.of(context).textTheme,
       )),
-      initialRoute: Constants.prefs.getBool("loggedIn") == true ? HomePage.id : LoginScreen.id,
+      initialRoute: HomePage.id,
       routes: <String, WidgetBuilder>{
         HomePage.id: (context) => HomePage(),
         SelfDefenceTips.id: (context) => SelfDefenceTips(),
